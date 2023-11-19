@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block  content %}
+
+
+<div class="event_body">
+<div class="heading">{{events[0]}}</div>
+<img src={{events[2]}} alt="Image Description" class="event_image">
+
+<div class="event_description">
+<center><br><b>Club:</b>{{events[4]}}<br><br><b>Event date:</b>{{events[3]}}<br><br></center>
+{{events[1]}}
+</div>
+<a href="abcd" style="text-decoration:none;">
+<center><input type="submit" value="Participate" class="submit"></center>
+</a><br>
+
+</div>
+{% endblock %}

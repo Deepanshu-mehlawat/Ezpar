@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="upperdiv">
+
+<div class="heading">{{ club_info[0] }}</div>
+
+<div class="content">
+
+<img src={{club_info[2]}} alt="Image Description" class="profile">
+
+<div class="text">
+<b><center>DESCRIPTION</B></CENTER><br>
+<textarea class="custom-textarea" rows="5" readonly>
+{{club_info[1]}}
+</textarea>
+</div>
+</div>
+</div>
+
+<div class="lower half">
+
+<div class="lowerdiv">
+<div class="heading">UPCOMING EVENTS</div>
+<div class="tables">
+<table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+	<tbody>
+                {% for event in events %}
+                
+	   <tr>
+                    <td>{{ event[0] }}</td>
+<td><a href="{{ url_for('event', event_id=event[0]) }}" style="text-decoration:none;">{{ event[1] }}</a></td>
+                    <td>{{ event[2] }}</td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+</div>
+</div>
+
+<div class="lowerdiv">
+<div class="heading">PAST EVENTS</div>
+<div class="tables">
+</div>
+</div>
+
+</div>
+
+{% endblock %}

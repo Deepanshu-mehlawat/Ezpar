@@ -1,0 +1,19 @@
+div.event_body{
+display:flex;
+margin: 20px 15% auto;
+background-color:white;
+border-radius: 25px;
+flex-direction: column;
+}
+
+#event_form{
+padding:25px;
+item-align:center;
+}
+
+.submit{
+border-radius: 25px;
+padding:8px;
+background-color:green;
+color:white;
+}

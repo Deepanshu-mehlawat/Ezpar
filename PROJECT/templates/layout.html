@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/club_page.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/events.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/body.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/add_event.css') }}">
+</head>
+<body>
+<ul class="navbar">
+    <li class="logo">E Z P A R </li>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('dashboard') }}">Dashoard</a></li>
+{% if u_type in [2,1] %}
+    <li><a href="{{ url_for('add_event') }}">Add Event</a></li>
+{% endif %}
+<li style="display:block ;float:right"><a class="active" href="#Profile">Profile</a></li>
+</ul>
+{% block content %}{% endblock %}
+</body>
+</html>
