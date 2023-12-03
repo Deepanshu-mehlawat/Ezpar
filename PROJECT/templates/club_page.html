@@ -7,7 +7,7 @@
 
 <div class="content">
 
-<img src={{club_info[2]}} alt="Image Description" class="profile">
+<img src={{club_info[2]}} alt="Image Description" class="profile" onerror="this.src='https://t3.ftcdn.net/jpg/04/62/93/66/360_F_462936689_BpEEcxfgMuYPfTaIAOC1tCDurmsno7Sp.jpg';">
 
 <div class="text">
 <b><center>DESCRIPTION</B></CENTER><br>
@@ -36,7 +36,7 @@
                 
 	   <tr>
                     <td>{{ event[0] }}</td>
-<td><a href="{{ url_for('event', event_id=event[0]) }}" style="text-decoration:none;">{{ event[1] }}</a></td>
+<td><a href="{{ url_for('event', event_id=event[0]) }}" style="text-decoration:none;color:black;">{{ event[1] }}</a></td>
                     <td>{{ event[2] }}</td>
                 </tr>
 
@@ -49,6 +49,27 @@
 <div class="lowerdiv">
 <div class="heading">PAST EVENTS</div>
 <div class="tables">
+<table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+	<tbody>
+                {% for event in past_events %}
+                
+	   <tr>
+                    <td>{{ event[0] }}</td>
+<td><a href="{{ url_for('event', event_id=event[0]) }}" style="text-decoration:none;color:black;">{{ event[1] }}</a></td>
+                    <td>{{ event[2] }}</td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+</table>
+
 </div>
 </div>
 

@@ -58,12 +58,12 @@ div.tables{
 width:100%;
 }
 
-table{
+div.tables table{
 width:100%;
 text-align:center;
 }
 
-table tbody tr:nth-child(odd) {
+div.tables table tbody tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 

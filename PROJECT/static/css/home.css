@@ -71,5 +71,16 @@ height:100%;
 
 .news{
 color: red;
-text-shadow: 0 0 5px rgba(255, 0, 0, 1);
+text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+.bulletin_events {
+    display: flex;
+    width:100%;
+    justify-content:space-between;
+    margin:10px;
+}
+
+.bulletin_events div{
+    display: inline;
 }

@@ -11,8 +11,9 @@ ul.navbar {
     list-style-type: none;
     margin: 0px auto;
     padding: 0;
+    height:55px;
     background-color: #333;
-    overflow: hidden; /* Background color for the navbar */
+    overflow: hidden;
     display: flex;
 
 }
@@ -24,7 +25,7 @@ ul.navbar li {
 }
 
 
-ul.navbar li a {
+ul.navbar li a.nav_buttons {
     display: block;
     margin-left: 20px;
     font-family: 'JetBrains Mono', monospace;
@@ -37,6 +38,24 @@ ul.navbar li a {
 }
 
 
-ul.navbar li a:hover {
+ul.navbar li a.nav_buttons:hover {
     background-color: #111;
+}
+
+ul.navbar li.bmu{
+margin-left:auto;
+width:13%;
+border-radius:34px 0px 0px 34px;
+background-color:white;
+} 
+
+.bmu_logo{
+display:flex;
+justify-content:center;
+}
+
+.bmu_image{
+height:60px;
+width:70%;
+
 }

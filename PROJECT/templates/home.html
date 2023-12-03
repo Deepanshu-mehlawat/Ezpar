@@ -6,7 +6,15 @@
 <div class="heading">BULLETIN</div>
 
 {% for i in events %}
-<p>&nbsp;&nbsp;<span class="news">New {{i[0]}} :</span><b>&nbsp;&nbsp; {{i[1]}} on {{i[2]}}</b></p>
+<div class="bulletin_events">
+<a href="{{ url_for('event', event_id=i[3]) }}" style="text-decoration:none;color: black;">
+<b>
+<div class="news">New {{i[0]}} :</div>
+<div> {{i[1]}}</div>
+<div> on {{i[2]}} </div>
+</b>
+</a>
+</div>
 {% endfor %}
 
 </div>
@@ -21,7 +29,5 @@
     </a>
     {% endfor %}
 </div>
-
-
 
 {% endblock %}
